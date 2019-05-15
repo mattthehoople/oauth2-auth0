@@ -26,6 +26,11 @@ class Auth0ResourceOwner implements ResourceOwnerInterface
         return $this->getValueByKey($this->response, 'user_id');
     }
 
+    public function getSub()
+    {
+        return $this->getValueByKey($this->response, 'sub');
+    }
+
     /**
      * Returns email address of the resource owner
      *
