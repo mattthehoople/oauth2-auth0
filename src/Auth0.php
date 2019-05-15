@@ -61,6 +61,11 @@ class Auth0 extends AbstractProvider
         return ['openid', 'email'];
     }
 
+    protected function getScopeSeparator()
+    {
+        return ' ';
+    }
+
     protected function checkResponse(ResponseInterface $response, $data)
     {
         if ($response->getStatusCode() >= 400) {
